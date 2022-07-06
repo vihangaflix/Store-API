@@ -29,7 +29,7 @@ const PORT = process.env.PORT || 3000;
 const start = async () => {
   try {
     //connect to MongoDB
-    await connectDB(process.env.MONGO_URL);
+    await connectDB(process.env.MONGO_URI);
     app.listen(PORT, () => {
       console.log(`server started on port ; ${PORT}`);
     });
